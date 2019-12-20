@@ -7,6 +7,7 @@ Tutorial on PCF Scheduled Batch Jobs
 mkdir app
 cd app
 ```
+---
 2) Create a task script
 task.sh
 ```
@@ -17,7 +18,7 @@ echo "running in cf instance id $CF_INSTANCE_GUID on host $CF_INSTANCE_INTERNAL_
 ```
 chmod +x task.sh
 ```
-
+---
 3) Create a manifest.yml file to push to PCF
 
 ```
@@ -36,7 +37,7 @@ Push it to PCF with
 ```
 cf push
 ```
-
+---
 4) Run script as a task
 
 ```
@@ -57,7 +58,7 @@ You can check the logs with
 ```
 cf logs task-app --recent
 ```
-
+---
 5) Scheduling Tasks [more info](https://docs.pivotal.io/scheduler/1-2/using-jobs.html)
 
 You must first bind the app to an instance of pcf scheduler. You can find the name of the scheduler with 
@@ -91,7 +92,7 @@ cf jobs
 cf job-history my-job
 ```
 
-
+---
 
 
 
